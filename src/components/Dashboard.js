@@ -19,7 +19,7 @@ const Dashboard = () => {
   // handle clear all users
   const handleclear = () => {
     localStorage.removeItem('user')
-    return navigate('/dashboard')
+    setLocalData(JSON.parse(localStorage.getItem("user")))
   }
 
   // callback funtion to recieve data from child component...
