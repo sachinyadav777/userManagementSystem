@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={Authenticate ? <Navigate to={"/dashboard"} /> : <Login />} />
       <Route path="/registration" element={Authenticate ? <Navigate to={"/dashboard"} /> : <Registration />} />
-      <Route path="/" element={<ProtectedRoutes />} >
+      <Route path="/dashboard" element={<ProtectedRoutes />} >
         <Route path="/dashboard" element={<Dashboard />} />
       </Route>
       <Route path="*" element={<Error />} />
